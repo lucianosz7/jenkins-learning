@@ -14,7 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building Project"
-                sh 'go run .'
+                sh 'ls -la'
             }
         }
         stage('Test') {
