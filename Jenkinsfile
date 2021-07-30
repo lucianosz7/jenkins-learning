@@ -14,7 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building Project"
-                sh 'go build'
+                sh 'go run .'
             }
         }
         stage('Test') {
