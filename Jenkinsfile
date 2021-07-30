@@ -14,7 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building Project"
-                sh 'ls -la'
+                bat 'go build'
             }
         }
         stage('Test') {
