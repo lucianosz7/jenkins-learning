@@ -1,5 +1,11 @@
 pipeline {
     agent any
+    tools {
+        go 'go-1.16.6'
+    }
+    enviroment {
+        GO111MODULE = 'on'
+    }
     options {
         skipStagesAfterUnstable()
     }
@@ -8,6 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building Project"
+                sh 'go build'
             }
         }
         stage('Test') {
