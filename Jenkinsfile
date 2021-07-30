@@ -3,7 +3,7 @@ pipeline {
     tools {
         go 'go-1.16.6'
     }
-    enviroment {
+    environment {
         GO111MODULE = 'on'
     }
     options {
